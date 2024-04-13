@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tareaListaFragment">
+
+    <fragment
+        android:id="@+id/tareaListaFragment"
+        android:name="com.example.ejejrcicionav.Fragments.TareaListaFragment"
+        android:label="fragment_tarea_lista"
+        tools:layout="@layout/fragment_tarea_lista" >
+        <action
+            android:id="@+id/action_tareaListaFragment_to_tareaDetalleFragment"
+            app:destination="@id/tareaDetalleFragment" />
+        <action
+            android:id="@+id/action_tareaListaFragment_to_agregarTareaFragment"
+            app:destination="@id/agregarTareaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tareaDetalleFragment"
+        android:name="com.example.ejejrcicionav.Fragments.TareaDetalleFragment"
+        android:label="fragment_tarea_detalle"
+        tools:layout="@layout/fragment_tarea_detalle" />
+    <fragment
+        android:id="@+id/agregarTareaFragment"
+        android:name="com.example.ejejrcicionav.Fragments.AgregarTareaFragment"
+        android:label="fragment_agregar_tarea"
+        tools:layout="@layout/fragment_agregar_tarea" >
+        <action
+            android:id="@+id/action_agregarTareaFragment_to_tareaListaFragment"
+            app:destination="@id/tareaListaFragment" />
+    </fragment>
+</navigation>
